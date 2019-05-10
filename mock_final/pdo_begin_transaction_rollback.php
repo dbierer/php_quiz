@@ -15,7 +15,7 @@ try {
 	// NOTE: using 'names4' instead of 'names' as in the slide
 	// test code ----------------------------------------------
 	$pdo = new PDO(	$dsn, $user, $password);
-    $sql = "INSERT INTO names (name, email) "
+    $sql = "INSERT INTO names4 (name, email) "
          . "VALUES ('demi', 'demi@example.com')";
     $pdo->beginTransaction();
     $pdo->query($sql);
@@ -26,8 +26,9 @@ try {
     $count2 = $stmt->fetchColumn();
 	// test code ----------------------------------------------
 
-	echo "\n1: $count1";
-	echo "\n2: $count2";
+    // assuming table uses InnoDB
+	echo "\n1: $count1";    // 4
+	echo "\n2: $count2";    // 3
 
 } catch (PDOException $e) {
 	echo $e->getMessage();
