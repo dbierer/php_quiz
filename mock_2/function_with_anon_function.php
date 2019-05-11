@@ -13,8 +13,8 @@ function get($a, $b, $c = 3) {
 get(2, 3);
 get(2, 3, 5);
 /* Produces:
-Notice: Undefined variable: d
+Notice: Undefined variable:
 [3, $2, 3, ]
-[3, $2, 5, 1]
+[3, $2, 5, ]
  */
 ?>
