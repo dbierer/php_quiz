@@ -1,6 +1,6 @@
 <?php
-// In the following code, which answer in place of /*1*/ 
-// will produce the most secure hash?
+// In the following code, which is the best answer 
+// in place of /*1*/ to produce a secure hash?
 
 // A
 $options = ['cost' => 16];

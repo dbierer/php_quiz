@@ -3,7 +3,7 @@
 ## PHP 7.1 installation from source
 * These packages had to be installed on top of a basic Ubuntu 18.04 VM:
 ```
-sudo apt-get install mysql-server gcc  
+sudo apt-get install mysql-server gcc libmysqlclient-dev libxml2-dev
 ```
 * Here are the configure options used:
 ```
@@ -22,4 +22,10 @@ html_errors = On
 ```
 
 ## Sample Quiz Question Code:
+```
+php_cert/
+├── mock_1
+├── mock_2
+└── mock_final
+```
 
