@@ -2,14 +2,13 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
 
-class MyException extends Exception
-{
-}
+class MyEx extends Exception 
+{}
 
 function bad()
 {
 	try {
-		throw new MyException("Something bad happened");
+		throw new MyEx("Who?");
 	} catch (OtherException $e) {
 		echo "What?";
 	}
@@ -17,7 +16,7 @@ function bad()
 
 try {
 	bad();
-} catch (MyException $e) {
+} catch (MyEx $e) {
 	echo "Bad!";
 } catch (Exception $e) {
 	echo "Oops!";
