@@ -15,14 +15,14 @@ try {
 	// NOTE: using 'names4' instead of 'names' as in the slide
 	// test code ----------------------------------------------
 	$pdo = new PDO(	$dsn, $user, $password);
-    $sql = "INSERT INTO names4 (name, email) "
-         . "VALUES ('demi', 'demi@example.com')";
+    $sql1 = "INSERT INTO names4 (name, email) VALUES ('demi', 'demi@example.com')";
+    $sql2 = "SELECT COUNT(*) FROM names4";
     $pdo->beginTransaction();
-    $pdo->query($sql);
-    $stmt = $pdo->query("SELECT COUNT(*) FROM names4");
+    $pdo->query($sql1);
+    $stmt = $pdo->query($sql2);
     $count1 = $stmt->fetchColumn();
     $pdo->rollBack();
-    $stmt = $pdo->query("SELECT COUNT(*) FROM names4");
+    $stmt = $pdo->query($sql2);
     $count2 = $stmt->fetchColumn();
 	// test code ----------------------------------------------
 

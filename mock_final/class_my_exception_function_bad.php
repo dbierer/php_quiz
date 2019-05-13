@@ -2,23 +2,19 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
 
-class MyEx extends Exception 
+class MyException extends Exception
 {}
-
-function bad()
-{
-	try {
-		throw new MyEx("Who?");
-	} catch (OtherException $e) {
-		echo "What?";
-	}
+function bad() {
+    try {
+        throw new MyException("Who?");
+    } catch (OtherException $e) {
+        echo "What?";
+    }
 }
-
 try {
-	bad();
-} catch (MyEx $e) {
-	echo "Bad!";
+    bad();
+} catch (MyException $e) {
+    echo "Where?";
 } catch (Exception $e) {
-	echo "Oops!";
+    echo "Why?";
 }
-

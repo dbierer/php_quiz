@@ -6,4 +6,4 @@ class MyClass {
 
 // echo /*1*/
 
-echo MyClass::$foo;
+echo myClass::$foo;
